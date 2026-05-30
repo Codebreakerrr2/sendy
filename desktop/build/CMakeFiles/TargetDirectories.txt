@@ -1,0 +1,3 @@
+/Users/usmanamini/Documents/sendy/desktop/build/CMakeFiles/sendy.dir
+/Users/usmanamini/Documents/sendy/desktop/build/CMakeFiles/edit_cache.dir
+/Users/usmanamini/Documents/sendy/desktop/build/CMakeFiles/rebuild_cache.dir
