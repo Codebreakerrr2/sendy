@@ -1,0 +1,12 @@
+# CMake Build-Verzeichnisse ignorieren (ohne / am Anfang!)
+build/
+CMakeFiles/
+CMakeCache.txt
+CMakeConfigureLog.yaml
+*.dll
+*.exe
+*.pdb
+
+# IDEs
+.vscode/
+.idea/
