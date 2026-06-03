@@ -25,14 +25,25 @@ namespace Repositories {
         nlohmann::json getAll(){
             return db.loadLines("contacts");
         }
-        nlohmann::json remove(const Contact& contact) {
+        bool remove(const Contact& contact) {
             nlohmann::json contacts = db.loadLines("contacts");
             nlohmann::json contactJson = getDBJson(contact);
-            if (contacts.contains(contactJson)) {
-                return db.remove("contacts", contactJson);
+
+            if (!contacts.is_array()) {
+                return false;
             }
+
+            for (auto it = contacts.begin(); it != contacts.end(); ++it) {
+                if (*it == contactJson) {
+                    contacts.erase(it);
+                    db.save("contacts", contacts);
+                    return true;
+                }
+            }
+
             return false;
         }
+
 
         nlohmann::json getDBJson(const Contact& contact){
             nlohmann::json contactJson;

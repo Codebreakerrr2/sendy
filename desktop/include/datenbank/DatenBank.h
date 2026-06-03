@@ -158,5 +158,5 @@ public:
 
         return false;
     }
-    bool remove()
+
 };
