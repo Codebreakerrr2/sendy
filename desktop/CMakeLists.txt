@@ -42,6 +42,7 @@ target_include_directories(sendy PRIVATE
 target_link_libraries(sendy PRIVATE
     Engine
      Qt6::Widgets
+        nlohmann_json::nlohmann_json
 )
 
 if(WIN32)

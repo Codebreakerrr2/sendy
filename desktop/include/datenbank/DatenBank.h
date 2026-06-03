@@ -136,7 +136,7 @@ public:
         return std::filesystem::exists(collectionPath);
     }
 
-    bool remove(const std::string& collection) {
+    bool destroy(const std::string& collection) {
         std::filesystem::path collectionPath = dbPath / (collection + ".json");
 
         if (!std::filesystem::exists(collectionPath)) {
@@ -158,4 +158,5 @@ public:
 
         return false;
     }
+    bool remove()
 };

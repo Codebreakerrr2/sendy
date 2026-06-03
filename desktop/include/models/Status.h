@@ -2,6 +2,7 @@
 
 namespace Status {
 enum class ConnectionStatus {
+    Unknown,
     Connected,
     Disconnected,
     Connecting,
@@ -10,6 +11,7 @@ enum class ConnectionStatus {
 
 
 enum class PresenceStatus {
+    Unknown,
     Online,
     Offline,
     Away,
@@ -17,6 +19,7 @@ enum class PresenceStatus {
 };
 
 enum class TransferStatus {
+    Unknown,
     NotStarted,
     InProgress,
     Completed,
