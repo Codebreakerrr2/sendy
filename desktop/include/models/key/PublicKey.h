@@ -12,6 +12,9 @@ public:
     bool isEmpty() const override {
         return encoded.empty();
     }
+    std::string getEncoded() const{
+        return encoded;
+   }
     bool operator==(const PublicKey& other) const {
     return encoded == other.encoded;
 }
